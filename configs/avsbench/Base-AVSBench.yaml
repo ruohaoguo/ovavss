@@ -1,0 +1,60 @@
+MODEL:
+  BACKBONE:
+    FREEZE_AT: 0
+    NAME: "build_resnet_backbone"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 50
+    STEM_TYPE: "basic"  # not used
+    STEM_OUT_CHANNELS: 64
+    STRIDE_IN_1X1: False
+    OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+    # NORM: "SyncBN"
+    RES5_MULTI_GRID: [1, 1, 1]  # not used
+DATASETS:
+  TRAIN: ("avsbench_ov_train_base", )
+  TEST: ("avsbench_ov_val_all", )
+  DATASET_RATIO: [1.0, ]
+SOLVER:
+  IMS_PER_BATCH: 1
+  BASE_LR: 0.0001
+  STEPS: (72171, 88209)
+  MAX_ITER: 96228
+  CHECKPOINT_PERIOD: 5000
+  WARMUP_FACTOR: 1.0
+  WARMUP_ITERS: 10
+  WEIGHT_DECAY: 0.05
+  OPTIMIZER: "ADAMW"
+  BACKBONE_MULTIPLIER: 0.1
+  CLIP_GRADIENTS:
+    ENABLED: True
+    CLIP_TYPE: "full_model"
+    CLIP_VALUE: 0.01
+    NORM_TYPE: 2.0
+  AMP:
+    ENABLED: False
+INPUT:
+  RANDOM_FLIP: "flip_by_clip"
+  AUGMENTATIONS: []
+  MIN_SIZE_TRAIN: (240, 360, 480)
+  MIN_SIZE_TRAIN_SAMPLING: "choice_by_clip"
+  MIN_SIZE_TEST: 360
+  CROP:
+    ENABLED: False
+    TYPE: "absolute_range"
+    SIZE: (600, 720)
+  PSEUDO:
+    AUGMENTATIONS: ['rotation']
+    MIN_SIZE_TRAIN: (240, 360, 480)
+    MIN_SIZE_TRAIN_SAMPLING: "choice_by_clip"
+    CROP:
+      ENABLED: False
+      TYPE: "absolute_range"
+      SIZE: (600, 720)
+  FORMAT: "RGB"
+DATALOADER:
+  FILTER_EMPTY_ANNOTATIONS: True
+  NUM_WORKERS: 4
+VERSION: 2

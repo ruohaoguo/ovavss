@@ -1,0 +1,46 @@
+_BASE_: ../OV_AVSS_R50.yaml
+MODEL:
+  BACKBONE:
+    NAME: "D2SwinTransformer"
+  SWIN:
+    EMBED_DIM: 128
+    DEPTHS: [2, 2, 18, 2]
+    NUM_HEADS: [4, 8, 16, 32]
+    WINDOW_SIZE: 12
+    APE: False
+    DROP_PATH_RATE: 0.3
+    PATCH_NORM: True
+    PRETRAIN_IMG_SIZE: 384
+  WEIGHTS: "pre_models/model_final_83d103.pkl"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  MASK_FORMER:
+    NUM_OBJECT_QUERIES: 100
+  CLIP_ADAPTER:
+    NAME: "ClipAdapter"
+    PROMPT_NAME: "vild"
+    CLIP_MODEL_NAME: "ViT-L/14@336px"
+    CLIP_ENSEMBLE: True # use ensemble of two classification branches
+    CLIP_ENSEMBLE_WEIGHT: 0.5
+INPUT:
+  RANDOM_FLIP: "flip_by_clip"
+  AUGMENTATIONS: []
+  MIN_SIZE_TRAIN: (240, 360)
+  MIN_SIZE_TRAIN_SAMPLING: "choice_by_clip"
+  MIN_SIZE_TEST: 360
+  CROP:
+    ENABLED: False
+    TYPE: "absolute_range"
+    SIZE: (600, 720)
+  PSEUDO:
+    AUGMENTATIONS: ['rotation']
+    MIN_SIZE_TRAIN: (240, 360)
+    MIN_SIZE_TRAIN_SAMPLING: "choice_by_clip"
+    CROP:
+      ENABLED: False
+      TYPE: "absolute_range"
+      SIZE: (600, 720)
+  FORMAT: "RGB"
+SOLVER:
+  CHECKPOINT_PERIOD: 2000
+OUTPUT_DIR: "./output_ov_avss_swinb"
