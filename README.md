@@ -2,7 +2,7 @@
 
 Ruohao Guo, Liao Qu, Dantong Niu, Yanyu Qi, Wenzhen Yue, Ji Shi, Bowei Xing, Xianghua Ying*
 
-[`PDF`](https://openreview.net/forum?id=PkW68qL47n&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3Dacmmm.org%2FACMMM%2F2024%2FConference%2FAuthors%23your-submissions)) | [`CODE`](https://github.com/ruohaoguo/ovavss) | [`Cite`]()
+[`PDF`]() | [`CODE`](https://github.com/ruohaoguo/ovavss) | [`Cite`](https://github.com/ruohaoguo/ovavss?tab=readme-ov-file#citation)
 
 
 ## News
@@ -117,7 +117,7 @@ pip install git+https://github.com/sennnnn/TrackEval.git
   python test_net_video_avsbench_swinb.py
   ```
 
-- **Note**: The results tested on [Example 1]() and [Example 2]() have a slight performance difference.
+- **Note**: The results tested on [Example 1](https://github.com/ruohaoguo/ovavss?tab=readme-ov-file#example-1) and [Example 2](https://github.com/ruohaoguo/ovavss?tab=readme-ov-file#example-2) have a slight performance difference.
 
 ## FAQ
 
