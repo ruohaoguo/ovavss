@@ -129,10 +129,11 @@ If you want to improve the usability or any piece of advice, please feel free to
 Please consider citing our paper in your publications if the project helps your research. BibTeX reference is as follow.
 
 ```
-@inproceedings{guo2024open,
+@article{guo2024open,
   title={Open-Vocabulary Audio-Visual Semantic Segmentation},
   author={Guo, Ruohao and Qu, Liao and Niu, Dantong and Qi, Yanyu and Yue, Wenzhen and Shi, Ji and Xing, Bowei and Ying, Xianghua},
-  booktitle={ACM Multimedia 2024}
+  journal={arXiv preprint arXiv:2407.21721},
+  year={2024}
 }
 ```
 
