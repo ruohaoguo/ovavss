@@ -1,5 +1,4 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 try:
     # ignore ShapelyDeprecationWarning from fvcore

@@ -1,5 +1,4 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0, 1"
 
 import argparse
 import multiprocessing as mp
