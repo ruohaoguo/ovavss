@@ -74,10 +74,10 @@ pip install git+https://github.com/sennnnn/TrackEval.git
 
 ## Setup
 
-1. Download pretrained weight [model_final_3c8ec9.pkl](https://dl.fbaipublicfiles.com/maskformer/mask2former/coco/instance/maskformer2_R50_bs16_50ep/model_final_3c8ec9.pkl) and put it in ```./pre_models```.
-2. Download pretrained weight [model_final_83d103.pkl](https://dl.fbaipublicfiles.com/maskformer/mask2former/coco/instance/maskformer2_swin_base_IN21k_384_bs16_50ep/model_final_83d103.pkl) and put it in ```./pre_models```.
-3. Download pretrained weight [vggish-10086976.pth](https://pan.baidu.com/s/1deNQvX99YiSCRwOxDHL3hg) (code: 1234) and put it in ```./pre_models```.
-4. Download and unzip [datasets](https://pan.baidu.com/s/1DaXe2JsWDxpZjJ12tIcQzA) (code: 1234) and put it in ```./datasets```.
+1. Download pretrained weight (model_final_3c8ec9.pkl, [[facebook]](https://dl.fbaipublicfiles.com/maskformer/mask2former/coco/instance/maskformer2_R50_bs16_50ep/model_final_3c8ec9.pkl)) and put it in ```./pre_models```.
+2. Download pretrained weight (model_final_83d103.pkl, [[facebook]](https://dl.fbaipublicfiles.com/maskformer/mask2former/coco/instance/maskformer2_swin_base_IN21k_384_bs16_50ep/model_final_83d103.pkl)) and put it in ```./pre_models```.
+3. Download pretrained weight (vggish-10086976.pth, [[baidu(code: 1234)](https://pan.baidu.com/s/1deNQvX99YiSCRwOxDHL3hg) | [OneDrive](https://1drv.ms/u/c/3c9af704fb61931d/EfpXV8iJMOtBi7mhlj80E6EB_SNZ_zA2F5n-19Wi_04KDA?e=uIfznZ)]) and put it in ```./pre_models```.
+4. Download and unzip datasets [[baidu(code: 1234)](https://pan.baidu.com/s/1DaXe2JsWDxpZjJ12tIcQzA) | [OneDrive](https://1drv.ms/u/c/3c9af704fb61931d/EVrS-epzE71KoK2KncnTnIgB0BRWd9KeNl8CweHhpiS8uQ?e=25ZVdN)] and put it in ```./datasets```.
 
 
 ## Training
@@ -101,7 +101,7 @@ pip install git+https://github.com/sennnnn/TrackEval.git
 
 - For ResNet-50 backbone: Run the following command
 
-- Download the trained model [model_ov_avss_r50.pth](https://pan.baidu.com/s/1ZLmvfvLKyVMw8jM8IceAeQ) (code: 1234) an put it in ```./pre_models```.
+- Download the trained model (model_ov_avss_r50.pth, [[baidu(code: 1234)](https://pan.baidu.com/s/1ZLmvfvLKyVMw8jM8IceAeQ) | [OneDrive](https://1drv.ms/u/c/3c9af704fb61931d/EeHqMZAiRrVPrqfhE65Mbr4BTABD2HXOlh_nEBfBFiDjwg?e=2OmxHL)]) and put it in ```./pre_models```.
 
   ```
   cd demo_video
@@ -110,7 +110,7 @@ pip install git+https://github.com/sennnnn/TrackEval.git
 
 - For Swin-base backbone: Run the following command
 
-- Download the trained model [model_ov_avss_swinb.pth](https://pan.baidu.com/s/1u8rjJTCq-LrwdZYIzTscvw) (code: 1234) an put it in ```./pre_models```.
+- Download the trained model (model_ov_avss_swinb.pth, [[baidu(code: 1234)](https://pan.baidu.com/s/1u8rjJTCq-LrwdZYIzTscvw) | [OneDrive](https://1drv.ms/u/c/3c9af704fb61931d/EZCc8YvPkCxOkUFJK1dl80IB6XBESGr1xRxAHQzZfRIy3A?e=FJgtNt)]) and put it in ```./pre_models```.
 
   ```
   cd demo_video
